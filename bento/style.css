@@ -1,0 +1,18 @@
+:root {
+    --primary-bg-color:#FBF1C7;
+    --title-font: BawalSans;
+    --card-bg-color: #B8BB26;
+}
+@font-face {
+  font-family: BawalSans;
+  src: url(bento/fonts/TWDBawalSans.ttf);
+  font-weight: bold;
+}
+
+body {
+    background-color: var(--primary-bg-color);
+}
+.card {
+    background-color: var(--card-bg-color);
+}
+
