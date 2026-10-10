@@ -1,18 +1,46 @@
 :root {
-    --primary-bg-color:#FBF1C7;
-    --title-font: BawalSans;
-    --card-bg-color: #B8BB26;
+  --primary-bg-color: #fbf1c7;
+  --title-font: "BawalSans", sans-serif;
+  --card-primary-bg-color: #1061b6;
+  --card-sec-bg-color: #ff1e46;
 }
+
 @font-face {
-  font-family: BawalSans;
-  src: url(bento/fonts/TWDBawalSans.ttf);
+  font-family: "BawalSans";
+  src: url("fonts/TWDBawalSans.ttf") format("truetype");
   font-weight: bold;
+  font-style: normal;
 }
 
 body {
-    background-color: var(--primary-bg-color);
-}
-.card {
-    background-color: var(--card-bg-color);
+  background-color: var(--primary-bg-color);
+  margin: 10px;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("assets/trainbg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
+.card {
+  min-height: 100px;
+  box-shadow: -4px 10px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card-blue {
+  background-color: var(--card-primary-bg-color);
+}
+
+.card-red {
+  background-color: var(--card-sec-bg-color);
+}
+
+h1 {
+  font-family: var(--title-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3rem;
+  color: var(--primary-bg-color);
+}
