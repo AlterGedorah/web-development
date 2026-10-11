@@ -1,13 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
-  --primary-bg-color: #fbf1c7;
-  --title-font: "BawalSans", sans-serif;
-  --card-primary-bg-color: #1061b6;
-  --card-sec-bg-color: #ff1e46;
+  --primary-bg-color: #000000;
+  --title-font: "HailMarySans", sans-serif;
+  --title-text-color: #fbf1c7;
+  --text-color: #d9d9d9;
 }
 
 @font-face {
-  font-family: "BawalSans";
-  src: url("fonts/TWDBawalSans.ttf") format("truetype");
+  font-family: "HailMarySans";
+  src: url("fonts/Hail_Mary_Sans_v2.otf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
@@ -17,30 +18,169 @@ body {
   margin: 10px;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("assets/trainbg.jpg");
+    url("assets/adrianbg.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+#ship {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("assets/hail_maryship.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#hail-mary {
+  font-family: "Hail Mary Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+#ship-text {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
 }
 
 .card {
+  background-color: var(--primary-bg-color);
   min-height: 100px;
   box-shadow: -4px 10px 4px rgba(0, 0, 0, 0.25);
+  border: 1px solid #fbf1c7;
+  border-radius: 20px;
 }
 
-.card-blue {
-  background-color: var(--card-primary-bg-color);
+.card-text {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 18px;
+  color: #d9d9d9;
 }
-
-.card-red {
-  background-color: var(--card-sec-bg-color);
+.frosted-card {
+  background-color: rgba(33, 37, 41, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid #fbf1c7;
 }
-
-h1 {
+h3 {
   font-family: var(--title-font);
   font-style: normal;
   font-weight: 400;
-  font-size: 3rem;
-  color: var(--primary-bg-color);
+  font-size: 2rem;
+  color: var(--title-text-color);
+}
+.small {
+  font-family: "IBM Plex Sans";
+  font-style: italic;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 18px;
+}
+.character-card {
+  height: 480px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.card-img-overlay {
+  padding: 0 !important;
+}
+
+.card-body-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 45%;
+  background-color: rgba(33, 37, 41, 0.4);
+  backdrop-filter: blur(4px);
+  overflow-y: auto;
+}
+/* marq */
+.marquee-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  background: radial-gradient(circle at center, #000000 0%, #111315 100%);
+}
+
+.marquee-container::before,
+.marquee-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  z-index: 2;
+  pointer-events: none;
+}
+.marquee-container::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(17, 19, 21, 1), rgba(17, 19, 21, 0));
+}
+.marquee-container::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(17, 19, 21, 1), rgba(17, 19, 21, 0));
+}
+
+.marquee-row {
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.marquee-left .marquee-content {
+  animation: scrollLeft 30s linear infinite;
+}
+
+.marquee-right .marquee-content {
+  animation: scrollRight 30s linear infinite;
+}
+
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.marquee-content, 
+.marquee-container {
+  font-family: 'IBM Plex Sans', sans-serif;
 }

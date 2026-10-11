@@ -13,26 +13,128 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main class="container-fluid">
-      <!-- 1st row -->
-      <div class="row g-3 mb-3">
-        <section class="col-3 col-lg-7">
-            <div class="card border-0 p-4 card-blue">
-              <h1>The 147 KM Mega-Corridor: NSCR by the Numbers</h1>
-              <img src="assets/train.png" alt="" />
-          </div>
-        </section>
-        <!--  -->
-        <section class="col-9 col-lg-5"">
+    <div class="container-fluid vh-100 p-2">
+      <!-- whole row -->
+      <div class="row flex-grow-1">
+        <!-- Banner Verti -->
+        <div class="col-lg-4 col-4 col-sm-12 d-flex flex-column gap-4">
+          <!-- Plot Card -->
+          <div class="card frosted-card flex-grow-1">
+            <div class="card-body justify-content-evenly">
+              <h3 class="card-title">PLOT</h3>
+              <p class="card-text">
+                In the near future, middle school teacher and former molecular
+                biologist Ryland Grace wakes from an induced coma aboard the
+                interstellar spacecraft Hail Mary, suffering from amnesia. He
+                learns that he is the sole survivor of a three-person crew
+                travelling to the Tau Ceti system, 11.9 light-years from Earth.
 
-          <div class="card border-0 p-4 card-blue">
-            <h1>Metro Manila Rapid Transit Backbone: Current Metrics</h1>
+                <br />
+                <br />
+                Through flashbacks, Grace recalls scientists discovering a
+                "Petrova line" of infrared light between the Sun and Venus. An
+                alien microbe called "astrophage" was proliferating on the Sun,
+                dimming it at a rate that would cause catastrophic global
+                cooling within thirty years. Eva Stratt, head of the Petrova
+                Taskforce, recruited Grace because of his expertise in
+                speculative astrobiology. He discovered that astrophages
+                consisted of unicellular organisms that absorb electromagnetic
+                radiation from the Sun and expel it for propulsion.
+              </p>
+
+              <button type="button" class="theme-warning btn-solid btn-styled">
+                <a href="www.google.com" target="blank">Learn More</a>
+              </button>
+            </div>
           </div>
-        </section>
+          <!-- Music Player -->
+          <div class="card flex-grow-1"></div>
+        </div>
+
+        <!-- Banner Hori -->
+        <div class="col-lg-8 col-8 col-sm-12 d-flex flex-column gap-4">
+          <!-- top row -->
+          <div class="row">
+            <div class="col-lg-12 col-12">
+              <div class="card p-0 m-0">
+                <img src="assets/film-banner.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <!-- bottom row -->
+          <div class="row">
+            <!-- Crew -->
+            <div class="col-6 d-flex flex-column gap-4">
+              <div class="card"></div>
+            </div>
+            <!-- Ship & Data-->
+            <div class="col-6">
+              <div class="row d-flex flex-column gap-4">
+                <!-- Ship -->
+                <div class="col-12">
+                  <div
+                    class="card p-5 justify-content-evenly text-white border-0 shadow-lg"
+                    id="ship"
+                  >
+                    <h3 class="pt-5">Ship</h3>
+
+                    <h5 id="hail-mary" class="card-title fw-bold mb-1">
+                      The Hail Mary
+                    </h5>
+
+                    <p id="ship-text" class="card-text small mb-2">
+                      A heavily armored, rotating-habitat starship built to
+                      harness astrophage power and carry a one-way ticket to Tau
+                      Ceti.
+                    </p>
+                    <div class="pt-5">
+                      <p
+                        class="card-text small fst-italic text-white-50 pt-2 pb-5 mb-0"
+                      >
+                        "A flying laboratory powered by bugs and desperation."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- data -->
+                <div class="col-12">
+                  <div
+                    class="card text-white rounded-4 overflow-hidden shadow-lg"
+                  >
+                    <div
+                      class="card-body py-3 px-0 position-relative marquee-container"
+                    >
+                    <h3 class="p-5">Data</h3>
+                      <!-- Marquee Line 1 -->
+                      <div class="marquee-row marquee-left mb-2">
+                        <div class="marquee-content">
+                          <span class="badge bg-primary me-3">FILM</span> Global
+                          Box Office: ~$683M
+                          <span class="mx-3 text-white-50">•</span>
+                          <span class="badge bg-success me-3">BOOK</span> 10M+
+                          Copies Sold Globally
+                          <span class="mx-3 text-white-50">•</span>
+                          <span class="badge bg-primary me-3">FILM</span>
+                          Opening Weekend: $140.9M
+                          <span class="mx-3 text-white-50">•</span>
+                          <!-- Duplicate for loop continuity -->
+                          <span class="badge bg-primary me-3">FILM</span> Global
+                          Box Office: ~$683M
+                          <span class="mx-3 text-white-50">•</span>
+                          <span class="badge bg-success me-3">BOOK</span> 10M+
+                          Copies Sold Globally
+                        </div>
+                      </div>  
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <!-- 2nd row -->
-      <div class="row"></div>
-    </main>
+    </div>
     <script
       type="module"
       src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"
