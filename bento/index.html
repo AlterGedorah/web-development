@@ -15,9 +15,9 @@
   <body>
     <div class="container-fluid vh-100 p-2">
       <!-- whole row -->
-      <div class="row flex-grow-1">
+      <div class="row h-100 g-4">
         <!-- Banner Verti -->
-        <div class="col-lg-4 col-4 col-sm-12 d-flex flex-column gap-4">
+        <div class="col-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column gap-4 h-100">
           <!-- Plot Card -->
           <div class="card frosted-card flex-grow-1">
             <div class="card-body justify-content-evenly">
@@ -52,12 +52,23 @@
         </div>
 
         <!-- Banner Hori -->
-        <div class="col-lg-8 col-8 col-sm-12 d-flex flex-column gap-4">
+        <div class="col-8 col-sm-12 d-flex flex-column gap-4">
           <!-- top row -->
           <div class="row">
             <div class="col-lg-12 col-12">
-              <div class="card p-0 m-0">
-                <img src="assets/film-banner.png" alt="" />
+              <div
+                class="card p-5 justify-content-evenly text-white border-0 shadow-lg"
+                id="film-banner"
+              >
+                <h3>PROJECT HAIL MARY</h3>
+
+                <h5 id="hail-mary" class="card-title fw-bold mb-1">
+                  2026 Film
+                </h5>
+
+                <p id="ship-text" class="card-text small mb-2">
+                  A thrilling sci-fi, with humorous human connection with an alien.
+                </p>
               </div>
             </div>
           </div>
