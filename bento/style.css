@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 :root {
   --primary-bg-color: #000000;
   --title-font: "HailMarySans", sans-serif;
@@ -13,9 +14,11 @@
   font-style: normal;
 }
 
+
 body {
   background-color: var(--primary-bg-color);
-  margin: 10px;
+  margin: 0px;
+  padding: 10px;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("assets/adrianbg.jpg");
@@ -23,8 +26,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  margin-bottom: 0px;
-  margin-top: 0px;
+  min-height: 100vh;
 }
 
 a {
@@ -40,15 +42,17 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 #hail-mary {
-  font-family: "Hail Mary Sans";
+  font-family: "HailMarySans", sans-serif; 
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 1.2rem;
+  line-height: 1.4;
 }
+
 #ship-text {
-  font-family: "IBM Plex Sans";
+  font-family: "IBM Plex Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 1rem;
@@ -57,6 +61,7 @@ a {
 
 #crew-title {
   -webkit-text-stroke: 1px #332e2e;
+  color: var(--title-text-color);
 }
 
 .card {
@@ -66,45 +71,51 @@ a {
   border: 1px solid #fbf1c7 !important;
   border-radius: 20px;
 }
-/*  */
+
 #crew-carousel {
   border: 1px solid #fbf1c7 !important;
   border-radius: 20px;
 }
 
 .crew-name {
-  font-family: "Hail Mary Sans";
+  font-family: "HailMarySans", sans-serif; 
   font-style: normal;
   font-weight: 400;
-  font-size: 1.5vw;
+  font-size: 1.25rem; 
 }
+
 .crew-role {
-  font-family: "Roboto Mono";
+  font-family: "IBM Plex Mono", monospace; 
   font-style: normal;
   font-weight: 400;
-  font-size: 1vw;
-  line-height: 29px;
+  font-size: 0.85rem;
+  line-height: 1.2;
 }
+
 .crew-desc {
-  font-family: "IBM Plex Sans";
+  font-family: "IBM Plex Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.9rem;
   line-height: 18px;
 }
+
 .card-text {
-  font-family: "IBM Plex Sans";
+  font-family: "IBM Plex Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 1rem;
   line-height: 18px;
   color: #d9d9d9;
 }
+
 .frosted-card {
-  background-color: rgba(33, 37, 41, 0.4);
+  background-color: rgba(33, 37, 41, 0.5);
   backdrop-filter: blur(10px);
-  border: 1px solid #fbf1c7;
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid #fbf1c7 !important;
 }
+
 h3 {
   font-family: var(--title-font);
   font-style: normal;
@@ -112,13 +123,15 @@ h3 {
   font-size: 1.5rem;
   color: var(--title-text-color) !important;
 }
+
 .small {
-  font-family: "IBM Plex Sans";
+  font-family: "IBM Plex Sans", sans-serif;
   font-style: italic;
   font-weight: 200;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 13px;
+  line-height: 16px;
 }
+
 .character-card {
   position: relative;
   overflow: hidden;
@@ -127,17 +140,6 @@ h3 {
 
 .card-img-overlay {
   padding: 0 !important;
-}
-
-.card-body-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 45%;
-  background-color: rgba(33, 37, 41, 0.4);
-  backdrop-filter: blur(4px);
-  overflow-y: auto;
 }
 
 .card-img-overlay.carousel-caption {
@@ -151,17 +153,17 @@ h3 {
 .crew-overlay-box {
   width: 100%;
   height: 50%;
-  background-color: rgba(0, 0, 0, 0.4) !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 0 !important;
   overflow-y: auto;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+
 .flex-grow-1 {
   flex: 1 1 0% !important;
 }

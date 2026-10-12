@@ -11,17 +11,13 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="assets/icon.png">
   </head>
   <body>
-    <div class="container-fluid vh-100 p-2">
-      <!-- whole row -->
-      <div class="row h-100 g-4">
-        <!-- Banner Verti -->
-        <div
-          class="col-4 col-lg-4 col-md-12 col-sm-12 d-flex flex-column gap-4 h-100"
-        >
-          <!-- Title Card -->
-          <div class="col-lg-12 col-12">
+    <div class="container-fluid min-vh-100 p-2">
+      <div class="row g-4">
+        <div class="col-12 col-lg-4 d-flex flex-column gap-4">
+          <div class="col-12">
             <div
               class="card p-4 justify-content-evenly text-white shadow-lg"
               id="film-banner"
@@ -36,8 +32,7 @@
               </p>
             </div>
           </div>
-          <div class="col col-sm-12 flex-fill d-flex">
-            <!-- Plot Card -->
+          <div class="col-12 flex-fill d-flex">
             <div class="col d-flex flex-column flex-grow-1">
               <div
                 class="card frosted-card d-flex flex-column h-100 flex-fill shadow-lg"
@@ -81,12 +76,9 @@
           </div>
         </div>
 
-        <!-- Banner Hori -->
         <div class="col-12 col-lg-8 d-flex flex-column gap-4">
-          <!-- top row -->
           <div class="row g-4">
-            <!-- Information -->
-            <div class="col">
+            <div class="col-12">
               <div
                 class="card info-card d-flex text-center justify-content-center"
               >
@@ -94,16 +86,13 @@
               </div>
             </div>
           </div>
-          <!-- bottom row -->
           <div class="row g-4 flex-fill">
-            <!-- Crew Section  -->
-            <div class="col-6 col-lg-6 col-sm-12 d-flex flex-column">
+            <div class="col-12 col-lg-6 d-flex flex-column">
               <div
                 id="crew-carousel"
                 class="carousel slide crew-card-container position-relative overflow-hidden rounded-4 shadow-lg text-white flex-fill"
                 data-bs-ride="carousel"
               >
-                <!-- CREW Title Pinned Top Left -->
                 <div class="position-absolute top-0 start-0 p-4 z-3">
                   <h3
                     id="crew-title"
@@ -113,9 +102,7 @@
                   </h3>
                 </div>
 
-                <!-- Carousel Items -->
                 <div class="carousel-inner h-100">
-                  <!-- Ryland Grace -->
                   <div class="carousel-item active h-100">
                     <img
                       src="assets/ryland_banner.jpg"
@@ -149,7 +136,6 @@
                     </div>
                   </div>
 
-                  <!-- Rocky -->
                   <div class="carousel-item h-100">
                     <img
                       src="assets/rocky_crew.jpg"
@@ -172,7 +158,7 @@
                         </div>
                         <div>
                           <p
-                            class="small fst-italic border-top border-secondary pt-2 mb-0 text-white"
+                            class="small fst-italic text-white-50 border-top border-secondary pt-2 mb-0 text-white"
                           >
                             "Amaze! Amaze! Amaze!"
                           </p>
@@ -181,7 +167,6 @@
                     </div>
                   </div>
 
-                  <!-- Eva Stratt -->
                   <div class="carousel-item h-100">
                     <img
                       src="assets/stratt_crew.jpg"
@@ -216,7 +201,6 @@
                   </div>
                 </div>
 
-                <!-- Carousel Controls -->
                 <button
                   class="carousel-control-prev z-3"
                   type="button"
@@ -245,7 +229,6 @@
             </div>
 
             <div class="col-12 col-lg-6 d-flex flex-column gap-4">
-              <!-- Ship Card -->
               <div
                 class="card p-4 justify-content-evenly text-white shadow-lg border-0"
                 id="ship"
@@ -265,13 +248,11 @@
                 </div>
               </div>
 
-              <!-- Featured Posters Card -->
               <div
                 class="card p-4 frosted-card text-white shadow-lg border-0 flex-fill"
               >
                 <h3 class="card-title fs-5 mb-3">Featured Posters</h3>
                 <div class="row g-2">
-                  <!-- Poster 1 -->
                   <div class="col-4">
                     <div
                       class="card bg-dark border-secondary overflow-hidden h-100"
@@ -284,7 +265,6 @@
                       />
                     </div>
                   </div>
-                  <!-- Poster 2 -->
                   <div class="col-4">
                     <div
                       class="card bg-dark border-secondary overflow-hidden h-100"
@@ -297,7 +277,6 @@
                       />
                     </div>
                   </div>
-                  <!-- Poster 3 -->
                   <div class="col-4">
                     <div
                       class="card bg-dark border-secondary overflow-hidden h-100"
