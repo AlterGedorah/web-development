@@ -36,46 +36,53 @@
               </p>
             </div>
           </div>
-          <div class="col">
+          <div class="col d-flex">
             <!-- Plot Card -->
-            <div class="card frosted-card">
-              <div class="card-body p-4">
-                <h3 class="card-title">PLOT</h3>
-                <p class="card-text">
-                  In the near future, middle school teacher and former molecular
-                  biologist Ryland Grace wakes from an induced coma aboard the
-                  interstellar spacecraft Hail Mary, suffering from amnesia. He
-                  learns that he is the sole survivor of a three-person crew
-                  travelling to the Tau Ceti system, 11.9 light-years from
-                  Earth.
-
-                  <br />
-                  <br />
-                  Through flashbacks, Grace recalls scientists discovering a
-                  "Petrova line" of infrared light between the Sun and Venus. An
-                  alien microbe called "astrophage" was proliferating on the
-                  Sun, dimming it at a rate that would cause catastrophic global
-                  cooling within thirty years. Eva Stratt, head of the Petrova
-                  Taskforce, recruited Grace because of his expertise in
-                  speculative astrobiology. He discovered that astrophages
-                  consisted of unicellular organisms that absorb electromagnetic
-                  radiation from the Sun and expel it for propulsion.
-                </p>
-
-                <a
-                  class="btn btn-outline-warning"
-                  href="https://en.wikipedia.org/wiki/Project_Hail_Mary_(film)#Plot"
-                  target="_blank"
-                  role="button"
-                  >Learn More</a
+            <div class="col d-flex flex-column flex-grow-1">
+              <div
+                class="card frosted-card d-flex flex-column h-100 flex-fill shadow-lg"
+              >
+                <div
+                  class="card-body p-4 d-flex flex-column justify-content-between"
                 >
+                  <div>
+                    <h3 class="card-title fw-bold mb-3">PLOT</h3>
+                    <p class="card-text" id="ship-text">
+                      In the near future, middle school teacher and former
+                      molecular biologist Ryland Grace wakes from an induced
+                      coma aboard the interstellar spacecraft Hail Mary,
+                      suffering from amnesia. He learns that he is the sole
+                      survivor of a three-person crew travelling to the Tau Ceti
+                      system, 11.9 light-years from Earth.
+
+                      <br /><br />
+                      Through flashbacks, Grace recalls scientists discovering a
+                      "Petrova line" of infrared light between the Sun and
+                      Venus. An alien microbe called "astrophage" was
+                      proliferating on the Sun, dimming it at a rate that would
+                      cause catastrophic global cooling within thirty years. Eva
+                      Stratt, head of the Petrova Taskforce, recruited Grace
+                      because of his expertise in speculative astrobiology.
+                    </p>
+                  </div>
+
+                  <div class="mt-3">
+                    <a
+                      class="btn btn-outline-warning btn-sm"
+                      href="https://en.wikipedia.org/wiki/Project_Hail_Mary_(film)#Plot"
+                      target="_blank"
+                      role="button"
+                      >Learn More</a
+                    >
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Banner Hori -->
-        <div class="col-8 col-lg-8 col-sm-12 d-flex flex-column gap-4">
+        <div class="col-12 col-lg-8 d-flex flex-column gap-4">
           <!-- top row -->
           <div class="row">
             <!-- Information -->
@@ -90,7 +97,7 @@
           <!-- bottom row -->
           <div class="row flex-fill">
             <!-- Crew Section  -->
-            <div class="col-6 d-flex flex-column">
+            <div class="col-6 col-lg-6 col-sm-12 d-flex flex-column">
               <div
                 id="crew-carousel"
                 class="carousel slide crew-card-container position-relative overflow-hidden rounded-4 shadow-lg text-white flex-fill"
@@ -196,77 +203,70 @@
               </div>
             </div>
 
-            <!-- Ship & Data Column -->
-            <div class="col-6 d-flex flex-column h-100">
-              <div class="row d-flex flex-column flex-grow-1 gap-4">
-                <!-- Ship -->
-                <div class="col-12 d-flex flex-column">
-                  <div
-                    class="card p-4 justify-content-evenly text-white shadow-lg"
-                    id="ship"
-                  >
-                    <h3>Ship</h3>
-                    <h5 id="hail-mary" class="card-title fw-bold mb-1">
-                      The Hail Mary
-                    </h5>
-                    <p id="ship-text" class="card-text small mb-2">
-                      A heavily armored, rotating-habitat starship built to
-                      harness astrophage power and carry a one-way ticket to Tau
-                      Ceti.
-                    </p>
-                    <div>
-                      <p class="card-text small fst-italic text-white-50 mb-0">
-                        "A flying laboratory powered by bugs and desperation."
-                      </p>
+            <div class="col-12 col-lg-6 d-flex flex-column gap-4">
+              <!-- Ship Card -->
+              <div
+                class="card p-4 justify-content-evenly text-white shadow-lg border-0"
+                id="ship"
+              >
+                <h3>Ship</h3>
+                <h5 id="hail-mary" class="card-title fw-bold mb-1">
+                  The Hail Mary
+                </h5>
+                <p id="ship-text" class="card-text small mb-2 text-white-50">
+                  A heavily armored, rotating-habitat starship built to harness
+                  astrophage power and carry a one-way ticket to Tau Ceti.
+                </p>
+                <div>
+                  <p class="card-text small fst-italic text-white-50 mb-0">
+                    "A flying laboratory powered by bugs and desperation."
+                  </p>
+                </div>
+              </div>
+
+              <!-- Featured Posters Card -->
+              <div
+                class="card p-4 frosted-card text-white shadow-lg border-0 flex-fill"
+              >
+                <h3 class="card-title fs-5 mb-3">Featured Posters</h3>
+                <div class="row g-2">
+                  <!-- Poster 1 -->
+                  <div class="col-4">
+                    <div
+                      class="card bg-dark border-secondary overflow-hidden h-100"
+                    >
+                      <img
+                        src="assets/posters/poster1.jpg"
+                        alt="Poster 1"
+                        class="w-100 object-fit-cover"
+                        style="height: 150px"
+                      />
                     </div>
                   </div>
-                </div>
-                <!-- Posters -->
-                <div class="col-12 d-flex flex-column">
-                  <div class="card p-4">
-                    <h3>Featured Posters</h3>
-                    <div class="row g-3">
-                      <!-- Poster 1 -->
-                      <div class="col-4">
-                        <div
-                          class="card bg-dark border-secondary overflow-hidden h-100"
-                        >
-                          <img
-                            src="assets/posters/poster1.jpg"
-                            alt="Project Hail Mary Poster 1"
-                            class="w-100 h-100 object-fit-cover"
-                            style="min-height: 180px"
-                          />
-                        </div>
-                      </div>
-
-                      <!-- Poster 2 -->
-                      <div class="col-4">
-                        <div
-                          class="card bg-dark border-secondary overflow-hidden h-100"
-                        >
-                          <img
-                            src="assets/posters/poster2.jpg"
-                            alt="Project Hail Mary Poster 2"
-                            class="w-100 h-100 object-fit-cover"
-                            style="min-height: 180px"
-                          />
-                        </div>
-                      </div>
-
-                      <!-- Poster 3 -->
-                      <div class="col-4">
-                        <div
-                          class="card bg-dark border-secondary overflow-hidden h-100"
-                        >
-                          <img
-                            src="assets/posters/poster3.jpg"
-                            alt="Project Hail Mary Poster 3"
-                            class="w-100 h-100 object-fit-cover"
-                            style="min-height: 180px"
-                          />
-                        </div>
-                      </div>
+                  <!-- Poster 2 -->
+                  <div class="col-4">
+                    <div
+                      class="card bg-dark border-secondary overflow-hidden h-100"
+                    >
+                      <img
+                        src="assets/posters/poster2.jpg"
+                        alt="Poster 2"
+                        class="w-100 object-fit-cover"
+                        style="height: 150px"
+                      />
+                    </div>
+                  </div>
+                  <!-- Poster 3 -->
+                  <div class="col-4">
+                    <div
+                      class="card bg-dark border-secondary overflow-hidden h-100"
+                    >
+                      <img
+                        src="assets/posters/poster3.jpg"
+                        alt="Poster 3"
+                        class="w-100 object-fit-cover"
+                        style="height: 150px"
+                      />
                     </div>
                   </div>
                 </div>
