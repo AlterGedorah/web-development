@@ -36,7 +36,7 @@
               </p>
             </div>
           </div>
-          <div class="col d-flex">
+          <div class="col col-sm-12 flex-fill d-flex">
             <!-- Plot Card -->
             <div class="col d-flex flex-column flex-grow-1">
               <div
@@ -84,7 +84,7 @@
         <!-- Banner Hori -->
         <div class="col-12 col-lg-8 d-flex flex-column gap-4">
           <!-- top row -->
-          <div class="row">
+          <div class="row g-4">
             <!-- Information -->
             <div class="col">
               <div
@@ -95,7 +95,7 @@
             </div>
           </div>
           <!-- bottom row -->
-          <div class="row flex-fill">
+          <div class="row g-4 flex-fill">
             <!-- Crew Section  -->
             <div class="col-6 col-lg-6 col-sm-12 d-flex flex-column">
               <div
@@ -103,18 +103,18 @@
                 class="carousel slide crew-card-container position-relative overflow-hidden rounded-4 shadow-lg text-white flex-fill"
                 data-bs-ride="carousel"
               >
-                <!-- CREW Title-->
+                <!-- CREW Title Pinned Top Left -->
                 <div class="position-absolute top-0 start-0 p-4 z-3">
                   <h3
                     id="crew-title"
-                    class="fw-bold m-0 bg-opacity-50 py-1 rounded d-inline-block"
+                    class="fw-bold m-0 py-1 rounded d-inline-block"
                   >
                     CREW
                   </h3>
                 </div>
 
-                <!-- Items -->
-                <div class="carousel-inner flex-fill h-100">
+                <!-- Carousel Items -->
+                <div class="carousel-inner h-100">
                   <!-- Ryland Grace -->
                   <div class="carousel-item active h-100">
                     <img
@@ -122,29 +122,34 @@
                       class="d-block w-100 h-100 object-fit-cover"
                       alt="Ryland Grace"
                     />
-                    <!-- Bottom Half Text Overlay -->
                     <div
-                      class="carousel-caption card-img-overlay d-flex flex-column justify-content-end p-4 text-start"
+                      class="carousel-caption card-img-overlay d-flex flex-column justify-content-end p-0 text-start"
                     >
-                      <div class="crew-overlay-box p-3 rounded">
-                        <h3 class="fw-bold crew-name mb-1">Ryland Grace</h3>
-                        <p class="text-light crew-role mb-2 fst-italic">
-                          Molecular Biologist / Reluctant Savior
-                        </p>
-                        <p class="crew-desc mb-2">
-                          A former high school science teacher thrust into
-                          saving humanity.
-                        </p>
-                        <p
-                          class="small fst-italic border-top border-secondary pt-2 mb-0"
-                        >
-                          "Carl and I made a baby."
-                        </p>
+                      <div class="crew-overlay-box p-3">
+                        <div>
+                          <h3 class="fw-bold crew-name mb-1 fs-5">
+                            Ryland Grace
+                          </h3>
+                          <p class="text-light crew-role mb-2 fst-italic small">
+                            Molecular Biologist / Reluctant Savior
+                          </p>
+                          <p class="crew-desc mb-2 small text-white-50">
+                            A former high school science teacher thrust into
+                            saving humanity.
+                          </p>
+                        </div>
+                        <div>
+                          <p
+                            class="small fst-italic border-top border-secondary pt-2 mb-0 text-white"
+                          >
+                            "Carl and I made a baby."
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
 
-                  <!-- rocky -->
+                  <!-- Rocky -->
                   <div class="carousel-item h-100">
                     <img
                       src="assets/rocky_crew.jpg"
@@ -152,27 +157,31 @@
                       alt="Rocky"
                     />
                     <div
-                      class="carousel-caption card-img-overlay d-flex flex-column justify-content-end p-4 text-start"
+                      class="carousel-caption card-img-overlay d-flex flex-column justify-content-end p-0 text-start"
                     >
-                      <div class="crew-overlay-box p-3 rounded">
-                        <h3 class="fw-bold crew-name mb-1">Rocky</h3>
-                        <p class="text-light crew-role mb-2 fst-italic">
-                          Engineer Extraordinaire
-                        </p>
-                        <p class="crew-desc mb-2">
-                          A five-legged, pentagonal, rock-eating alien
-                          navigating the universe through echolocation.
-                        </p>
-                        <p
-                          class="small fst-italic text-white-50 border-top border-secondary pt-2 mb-0"
-                        >
-                          "Amaze! Amaze! Amaze!"
-                        </p>
+                      <div class="crew-overlay-box p-3">
+                        <div>
+                          <h3 class="fw-bold crew-name mb-1 fs-5">Rocky</h3>
+                          <p class="text-light crew-role mb-2 fst-italic small">
+                            Engineer Extraordinaire
+                          </p>
+                          <p class="crew-desc mb-2 small text-white-50">
+                            A five-legged, pentagonal, rock-eating alien
+                            navigating through echolocation.
+                          </p>
+                        </div>
+                        <div>
+                          <p
+                            class="small fst-italic border-top border-secondary pt-2 mb-0 text-white"
+                          >
+                            "Amaze! Amaze! Amaze!"
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
 
-                  <!-- eva Stratt -->
+                  <!-- Eva Stratt -->
                   <div class="carousel-item h-100">
                     <img
                       src="assets/stratt_crew.jpg"
@@ -180,26 +189,58 @@
                       alt="Eva Stratt"
                     />
                     <div
-                      class="carousel-caption card-img-overlay d-flex flex-column justify-content-end p-4 text-start"
+                      class="carousel-caption card-img-overlay d-flex flex-column justify-content-end p-0 text-start"
                     >
-                      <div class="crew-overlay-box p-3 rounded">
-                        <h3 class="crew-name fw-bold mb-1">Eva Stratt</h3>
-                        <p class="text-light crew-role mb-2 fst-italic">
-                          Director / Head of UN Taskforce
-                        </p>
-                        <p class="crew-desc mb-2">
-                          Ruthless, pragmatic, and entirely unconcerned with
-                          ethics or popularity.
-                        </p>
-                        <p
-                          class="small fst-italic border-top border-secondary pt-2 mb-0"
-                        >
-                          "If we die, it doesn't matter what the rules were."
-                        </p>
+                      <div class="crew-overlay-box p-3">
+                        <div>
+                          <h3 class="crew-name fw-bold mb-1 fs-5">
+                            Eva Stratt
+                          </h3>
+                          <p class="text-light crew-role mb-2 fst-italic small">
+                            Director / Head of UN Taskforce
+                          </p>
+                          <p class="crew-desc mb-2 small text-white-50">
+                            Ruthless, pragmatic, and entirely unconcerned with
+                            ethics or popularity.
+                          </p>
+                        </div>
+                        <div>
+                          <p
+                            class="small fst-italic border-top border-secondary pt-2 mb-0 text-white"
+                          >
+                            "If we die, it doesn't matter what the rules were."
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
+
+                <!-- Carousel Controls -->
+                <button
+                  class="carousel-control-prev z-3"
+                  type="button"
+                  data-bs-target="#crew-carousel"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next z-3"
+                  type="button"
+                  data-bs-target="#crew-carousel"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
               </div>
             </div>
 
