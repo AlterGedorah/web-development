@@ -11,12 +11,12 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="assets/icon.png">
+    <link rel="icon" href="assets/icon.png" />
   </head>
-  <body class="p-0 pt-2">
-    <div class="container-fluid d-flex min-vh-100">
+  <body>
+    <div class="container-fluid d-flex min-vh-100 p-3">
       <!-- main row -->
-      <div class="row p-1 g-4">
+      <div class="row g-4 flex-fill">
         <!-- left col -->
         <div class="col-12 col-lg-4 d-flex flex-column gap-4">
           <!-- film banner -->
@@ -46,7 +46,7 @@
                 >
                   <div>
                     <h3 class="card-title fw-bold mb-3">PLOT</h3>
-                    <p class="card-text" id="ship-text">
+                    <p class="card-text plot-text" id="ship-text">
                       In the near future, middle school teacher and former
                       molecular biologist Ryland Grace wakes from an induced
                       coma aboard the interstellar spacecraft Hail Mary,
@@ -256,7 +256,7 @@
                 class="card p-4 frosted-card text-white shadow-lg border-0 flex-fill"
               >
                 <h3 class="card-title fs-5 mb-3">Featured Posters</h3>
-                <div class="row g-2">
+                <div class="row g-2 flex-fill poster-row">
                   <div class="col-4">
                     <div
                       class="card bg-dark border-secondary overflow-hidden h-100"
@@ -264,8 +264,7 @@
                       <img
                         src="assets/posters/poster1.jpg"
                         alt="Poster 1"
-                        class="w-100 object-fit-cover"
-                        style="height: 150px"
+                        class="poster-img object-fit-cover"
                       />
                     </div>
                   </div>
@@ -276,8 +275,7 @@
                       <img
                         src="assets/posters/poster2.jpg"
                         alt="Poster 2"
-                        class="w-100 object-fit-cover"
-                        style="height: 150px"
+                        class="poster-img object-fit-cover"
                       />
                     </div>
                   </div>
@@ -288,8 +286,7 @@
                       <img
                         src="assets/posters/poster3.jpg"
                         alt="Poster 3"
-                        class="w-100 object-fit-cover"
-                        style="height: 150px"
+                        class="poster-img object-fit-cover"
                       />
                     </div>
                   </div>

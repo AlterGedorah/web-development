@@ -14,11 +14,10 @@
   font-style: normal;
 }
 
-
 body {
   background-color: var(--primary-bg-color);
-  margin: 0px;
-  padding: 10px;
+  margin: 0;
+  padding: 0;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("assets/adrianbg.jpg");
@@ -27,8 +26,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 100vh;
+  min-height: 100dvh;
 }
-
 a {
   color: var(--text-color) !important;
   text-decoration: none;
@@ -44,7 +43,7 @@ a {
 }
 
 #hail-mary {
-  font-family: "HailMarySans", sans-serif; 
+  font-family: "HailMarySans", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 1.2rem;
@@ -78,14 +77,14 @@ a {
 }
 
 .crew-name {
-  font-family: "HailMarySans", sans-serif; 
+  font-family: "HailMarySans", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 1.25rem; 
+  font-size: 1.25rem;
 }
 
 .crew-role {
-  font-family: "IBM Plex Mono", monospace; 
+  font-family: "IBM Plex Mono", monospace;
   font-style: normal;
   font-weight: 400;
   font-size: 0.85rem;
@@ -167,73 +166,38 @@ h3 {
 .flex-grow-1 {
   flex: 1 1 0% !important;
 }
-
-html {
-height: 100%;
+.container-fluid.min-vh-100 {
+  min-height: 100dvh !important;
 }
 
-body {
-box-sizing: border-box;
-min-height: 100vh;
+#crew-carousel {
+  min-height: 20rem;
 }
 
-.app-shell {
-min-height: 0;
-padding-top: 0;
-padding-bottom: 0;
+#crew-carousel .carousel-inner {
+  position: absolute;
+  inset: 0;
+  height: auto;
 }
 
-.poster-img {
-display: block;
-width: 100%;
-height: 150px;
+#crew-carousel .carousel-item img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.card-body > div:first-child {
-min-height: 0;
-}
-
-@media (min-width: 992px) {
-body {
-height: 100vh;
-height: 100dvh;
-min-height: 0;
-overflow: hidden;
-}
-
-.app-shell {
-height: 100%;
-}
-
-.app-shell > .row {
-height: 100%;
-width: 100%;
-margin-top: 0;
-margin-bottom: 0;
-}
-
-.lg-fit {
---bs-gutter-y: 0;
-}
-
-.app-shell [class*="col"],
-.app-shell .card,
-.app-shell .carousel-inner {
-min-height: 0;
-}
-
-.card-body > div:first-child {
-overflow-y: auto;
+.plot-text {
+  max-height: 32vh;
+  overflow-y: auto;
 }
 
 .poster-row {
-flex: 1 1 0;
-min-height: 0;
+  min-height: 7rem;
 }
 
 .poster-img {
-flex: 1 1 0;
-height: auto;
-min-height: 0;
-}
+  flex: 1 1 0;
+  min-height: 0;
+  width: 100%;
 }
