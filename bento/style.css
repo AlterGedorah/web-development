@@ -167,3 +167,73 @@ h3 {
 .flex-grow-1 {
   flex: 1 1 0% !important;
 }
+
+html {
+height: 100%;
+}
+
+body {
+box-sizing: border-box;
+min-height: 100vh;
+}
+
+.app-shell {
+min-height: 0;
+padding-top: 0;
+padding-bottom: 0;
+}
+
+.poster-img {
+display: block;
+width: 100%;
+height: 150px;
+}
+
+.card-body > div:first-child {
+min-height: 0;
+}
+
+@media (min-width: 992px) {
+body {
+height: 100vh;
+height: 100dvh;
+min-height: 0;
+overflow: hidden;
+}
+
+.app-shell {
+height: 100%;
+}
+
+.app-shell > .row {
+height: 100%;
+width: 100%;
+margin-top: 0;
+margin-bottom: 0;
+}
+
+.lg-fit {
+--bs-gutter-y: 0;
+}
+
+.app-shell [class*="col"],
+.app-shell .card,
+.app-shell .carousel-inner {
+min-height: 0;
+}
+
+.card-body > div:first-child {
+overflow-y: auto;
+}
+
+.poster-row {
+flex: 1 1 0;
+min-height: 0;
+}
+
+.poster-img {
+flex: 1 1 0;
+height: auto;
+min-height: 0;
+}
+}
