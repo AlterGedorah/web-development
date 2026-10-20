@@ -1,38 +1,440 @@
 <!doctype html>
-<html lang="en" data-bs-theme="light">
-    <head>
-        <title>Title</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-            crossorigin="anonymous"
-        />
-        <link rel="stylesheet" href="style.css">
-    </head>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <title>Slam Dunk Roster</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Teko:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/slam_dunk_logo_hero.png"
+      type="image/x-icon"
+    />
+  </head>
 
-    <body>
-        <div class="container-fluid">
-            <!-- Hero Row -->
-            <div class="row" id="bannerRow">
-                <div class="col-12" >
-                    <img id="logo" src="assets/images/slam_dunk_logo_hero.png" alt="Slam Dunk Logo">
-                </div>
-                
-            </div>
-            <!-- Characters -->
-             <div class="row">
-                <div class="col-12">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur obcaecati tempora totam eligendi asperiores sit cumque officiis accusantium repellat, ducimus optio, fuga eos. In tenetur ex, quas dicta voluptatibus ipsa?</p>
-                </div>
-             </div>
+  <body>
+    <section class="hero-parallax">
+      <div
+        class="hero-overlay d-flex flex-column justify-content-center align-items-center text-center p-3"
+      >
+        <img
+          id="logo"
+          src="assets/images/slam_dunk_logo_hero.png"
+          alt="Slam Dunk Logo"
+          class="img-fluid hero-logo mb-3"
+        />
+        <h1 class="sports-font tracking-wide text-uppercase text-light fs-3">
+          Kanagawa Inter-High Roster
+        </h1>
+      </div>
+    </section>
+    <div class="d-flex justify-content-center">
+      <div
+        class="countdown-box mt-3 text-center p-3 rounded-3 bg-dark bg-opacity-75 border border-secondary border-opacity-25"
+      >
+        <div
+          class="small text-uppercase tracking-wider text-secondary sports-font mb-1"
+        >
+          Next Slam Dunk Anniversary (Oct 1)
         </div>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-            crossorigin="anonymous"
-        ></script>
-    </body>
+        <div
+          id="anniversary-countdown"
+          class="d-flex justify-content-center align-items-center gap-3 text-white sports-font fs-4"
+        >
+          <div>
+            <span id="cd-days" class="text-danger fw-bold fs-2">00</span
+            ><small class="d-block text-muted fs-6">DAYS</small>
+          </div>
+          <div class="fs-2 text-secondary">:</div>
+          <div>
+            <span id="cd-hours" class="text-white fw-bold fs-2">00</span
+            ><small class="d-block text-muted fs-6">HRS</small>
+          </div>
+          <div class="fs-2 text-secondary">:</div>
+          <div>
+            <span id="cd-mins" class="text-white fw-bold fs-2">00</span
+            ><small class="d-block text-muted fs-6">MINS</small>
+          </div>
+          <div class="fs-2 text-secondary">:</div>
+          <div>
+            <span id="cd-secs" class="text-danger fw-bold fs-2">00</span
+            ><small class="d-block text-muted fs-6">SECS</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="container py-5">
+      <div id="teams-root"></div>
+    </main>
+    <footer
+      class="site-footer border-top border-secondary border-opacity-25 py-4 mt-5"
+    >
+      <div class="container text-center">
+        <div
+          class="d-flex justify-content-center align-items-center gap-2 mb-2"
+        >
+          <span class="badge text-bg-danger sports-font fs-6">FAN MADE</span>
+          <span class="text-secondary small">·</span>
+          <span class="kanji-font text-danger-emphasis small"
+            >スラムダンク</span
+          >
+        </div>
+        <p class="small text-secondary mb-1">
+          This is a non-commercial, <strong>fan-made website</strong> dedicated
+          to the <em>Slam Dunk</em> series created by Takehiko Inoue.
+        </p>
+        <p class="extra-small text-muted mb-0">
+          All characters, images, names, and related trademarks are the property
+          of Takehiko Inoue, Shueisha, and Toei Animation.
+        </p>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      const slamDunkData = [
+        {
+          teamName: "Shohoku High",
+          tagline: "The Underdogs Aiming for National Dominance",
+          themeBadge: "danger",
+          members: [
+            {
+              id: 1,
+              name: "Hanamichi Sakuragi",
+              japanese_name: "桜木 花道",
+              jersey: 10,
+              position: "PF",
+              height: 189,
+              image: "assets/images/sakuragi.png",
+              icon: "assets/images/icons/sakuragi_icon.jpg",
+              desc: "The self-proclaimed Rebound King and high-flying power rookie.",
+            },
+            {
+              id: 2,
+              name: "Kaede Rukawa",
+              japanese_name: "流川 楓",
+              jersey: 11,
+              position: "SF",
+              height: 187,
+              image: "assets/images/rukawa.jpg",
+              icon: "assets/images/icons/rukawa_icon.jpg",
+              desc: "Shohoku's lethal scoring prodigy aiming to be #1 in Japan.",
+            },
+            {
+              id: 3,
+              name: "Takenori Akagi",
+              japanese_name: "赤木 剛憲",
+              jersey: 4,
+              position: "C",
+              height: 197,
+              image: "assets/images/akagi.jpg",
+              icon: "assets/images/icons/akagi_icon.jpg",
+              desc: "Captain and defensive pillar known as 'Gori'.",
+            },
+            {
+              id: 4,
+              name: "Hisashi Mitsui",
+              japanese_name: "三井 寿",
+              jersey: 14,
+              position: "SG",
+              height: 184,
+              image: "assets/images/mitsui.jpg",
+              icon: "assets/images/icons/mitsui_icon.jpg",
+              desc: "Former Junior High MVP with an unstoppable clutch 3-point stroke.",
+            },
+            {
+              id: 5,
+              name: "Ryota Miyagi",
+              japanese_name: "宮城 リョータ",
+              jersey: 7,
+              position: "PG",
+              height: 168,
+              image: "assets/images/miyagi.jpg",
+              icon: "assets/images/icons/miyagi_icon.jpg",
+              desc: "Lightning-quick floor general who dictates Shohoku's breakneck tempo.",
+            },
+            {
+              id: 6,
+              name: "Kiminobu Kogure",
+              japanese_name: "木暮 公延",
+              jersey: 5,
+              position: "SG / SF",
+              height: 178,
+              image: "assets/images/kogure.jpg",
+              icon: "assets/images/icons/kogure_icon.jpg",
+              desc: "Vice-captain and steady sixth-man whose crucial 3-pointer punched Shohoku's ticket to Nationals.",
+            },
+            {
+              id: 7,
+              name: "Yasuharu Yasuda",
+              japanese_name: "安田 靖春",
+              jersey: 6,
+              position: "PG",
+              height: 165,
+              image: "assets/images/yasuda.jpg",
+              icon: "assets/images/icons/yasuda_icon.jpg",
+              desc: "Calm backup point guard known for controlling pace under high full-court pressure.",
+            },
+            {
+              id: 8,
+              name: "Tetsushi Shiozaki",
+              japanese_name: "潮崎 哲士",
+              jersey: 8,
+              position: "SG",
+              height: 170,
+              image: "assets/images/shiozaki.jpg",
+              icon: "assets/images/icons/shiozaki_icon.jpg",
+              desc: "Second-year reserve shooting guard providing perimeter bench depth.",
+            },
+            {
+              id: 9,
+              name: "Satoru Kakuta",
+              japanese_name: "角田 悟",
+              jersey: 9,
+              position: "C / PF",
+              height: 180,
+              image: "assets/images/kakuta.jpg",
+              icon: "assets/images/icons/kakuta_icon.jpg",
+              desc: "Backup big man who steps in during interior foul trouble.",
+            },
+            {
+              id: 10,
+              name: "Kentaro Ishii",
+              japanese_name: "石井 健太郎",
+              jersey: 12,
+              position: "SF",
+              height: 170,
+              image: "assets/images/ishii.jpg",
+              icon: "assets/images/icons/ishii_icon.jpg",
+              desc: "Eager first-year bench member supporting the team from the sidelines.",
+            },
+            {
+              id: 11,
+              name: "Satoru Sasaoka",
+              japanese_name: "佐々岡 智",
+              jersey: 13,
+              position: "F",
+              height: 172,
+              image: "assets/images/sasaoka.jpg",
+              icon: "assets/images/icons/sasaoka_icon.jpg",
+              desc: "First-year rookie forward working hard to earn playing time.",
+            },
+            {
+              id: 12,
+              name: "Toki Kuwata",
+              japanese_name: "桑田 登紀",
+              jersey: 15,
+              position: "G",
+              height: 163,
+              image: "assets/images/kuwata.jpg",
+              icon: "assets/images/icons/kuwata_icon.jpg",
+              desc: "First-year reserve guard supporting varsity match preparations.",
+            },
+
+            {
+              id: 13,
+              name: "Mitsuyoshi Anzai",
+              japanese_name: "安西 光義",
+              jersey: "COACH",
+              position: "Head Coach",
+              height: 175,
+              image: "assets/images/anzai.jpg",
+              icon: "assets/images/icons/anzai_icon.jpg",
+              desc: "Legendary former national team player nicknamed 'White-Haired Devil' turned calm tactical mastermind.",
+            },
+            {
+              id: 14,
+              name: "Ayako",
+              japanese_name: "彩子",
+              jersey: "MGR",
+              position: "Team Manager",
+              height: 163,
+              image: "assets/images/ayako.jpg",
+              icon: "assets/images/icons/ayako_icon.jpg",
+              desc: "Spirited and disciplined manager who keeps Sakuragi in check and handles team logistics.",
+            },
+            {
+              id: 15,
+              name: "Haruko Akagi",
+              japanese_name: "赤木 晴子",
+              jersey: "ASST",
+              position: "Assistant Manager",
+              height: 156,
+              image: "assets/images/haruko.jpg",
+              icon: "assets/images/icons/haruko_icon.jpg",
+              desc: "Akagi's younger sister whose passion for basketball inspired Sakuragi to join Shohoku.",
+            },
+          ],
+        },
+      ];
+
+      const teamsRoot = document.getElementById("teams-root");
+      const teamsToRender = slamDunkData.slice(0, 5);
+
+      let fullHTML = "";
+
+      for (let t = 0; t < teamsToRender.length; t++) {
+        const team = teamsToRender[t];
+        const panelMembers = team.members.slice(0, 5);
+        const benchMembers = team.members.slice(5);
+
+        fullHTML += `
+          <section class="team-section mb-5 pb-4">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <h2 class="sports-font display-6 mb-0">${team.teamName}</h2>
+              <span class="badge text-bg-${team.themeBadge} fs-6">TEAM #${t + 1}</span>
+            </div>
+            <p class="text-secondary mb-4">${team.tagline}</p>
+
+            <!-- 5-Panel Narrow Interactive Collage -->
+            <div class="collage-container mx-auto" id="gallery-${t}">
+        `;
+
+        for (let p = 0; p < panelMembers.length; p++) {
+          const m = panelMembers[p];
+          fullHTML += `
+            <div class="panel">
+              <img src="${m.image}" alt="${m.name}" loading="lazy" />
+              <div class="panel-details">
+                <button class="close-btn" title="Close details">&times;</button>
+                <div class="mb-2">
+                  <span class="badge text-bg-${team.themeBadge}">#${m.jersey} · ${m.position}</span>
+                  <span class="badge bg-dark border border-secondary ms-1">${m.height} cm</span>
+                </div>
+                <h3 class="sports-font mb-0 text-white">${m.name}</h3>
+                <h5 class="kanji-font text-danger-emphasis mb-2">${m.japanese_name}</h5>
+                <p class="small text-light-emphasis">${m.desc}</p>
+              </div>
+            </div>
+          `;
+        }
+
+        fullHTML += `</div>`;
+
+        if (benchMembers.length > 0) {
+          fullHTML += `
+            <div class="mt-4">
+              <h5 class="text-uppercase text-secondary sports-font fs-5 mb-3">Reserve & Key Roster</h5>
+              <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+          `;
+
+          for (let b = 0; b < benchMembers.length; b++) {
+            const bm = benchMembers[b];
+            fullHTML += `
+              <div class="col">
+                <div class="card h-100 bg-dark-subtle border-secondary border-opacity-25 shadow-sm">
+                  <div class="row g-0 h-100">
+                    <div class="col-4">
+                      <img src="${bm.icon}" class="img-fluid rounded-start h-100 object-fit-cover" alt="${bm.name}" />
+                    </div>
+                    <div class="col-8">
+                      <div class="card-body py-2 px-3 d-flex flex-column justify-content-between h-100">
+                        <div>
+                          <div class="d-flex justify-content-between align-items-center mb-1">
+                            <h6 class="card-title sports-font mb-0">${bm.name}</h6>
+                            <span class="badge text-bg-${team.themeBadge}">#${bm.jersey}</span>
+                          </div>
+                          <p class="small text-muted mb-1">${bm.japanese_name} · ${bm.position} · ${bm.height}cm</p>
+                          <p class="card-text small text-secondary">${bm.desc}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            `;
+          }
+
+          fullHTML += `
+              </div>
+            </div>
+          `;
+        }
+
+        fullHTML += `</section>`;
+      }
+
+      teamsRoot.innerHTML = fullHTML;
+
+      document.addEventListener("click", (e) => {
+        const closeBtn = e.target.closest(".close-btn");
+        const panel = e.target.closest(".panel");
+
+        if (closeBtn) {
+          e.stopPropagation();
+          const activePanel = closeBtn.closest(".panel.active");
+          const container = closeBtn.closest(".collage-container");
+          if (activePanel && container) {
+            activePanel.classList.remove("active");
+            container.classList.remove("has-active");
+          }
+          return;
+        }
+
+        if (panel) {
+          const container = panel.closest(".collage-container");
+          if (!container) return;
+
+          if (panel.classList.contains("active")) return;
+          const currentActive = container.querySelector(".panel.active");
+          if (currentActive) {
+            currentActive.classList.remove("active");
+          }
+
+          panel.classList.add("active");
+          container.classList.add("has-active");
+        }
+      });
+      function startAnniversaryCountdown() {
+        function updateTimer() {
+          const now = new Date();
+          let currentYear = now.getFullYear();
+          let anniversaryDate = new Date(currentYear, 9, 1, 0, 0, 0);
+
+          if (now > anniversaryDate) {
+            anniversaryDate = new Date(currentYear + 1, 9, 1, 0, 0, 0);
+          }
+
+          const diff = anniversaryDate - now;
+
+          const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+          const minutes = Math.floor((diff / 1000 / 60) % 60);
+          const seconds = Math.floor((diff / 1000) % 60);
+
+          document.getElementById("cd-days").textContent = String(
+            days,
+          ).padStart(2, "0");
+          document.getElementById("cd-hours").textContent = String(
+            hours,
+          ).padStart(2, "0");
+          document.getElementById("cd-mins").textContent = String(
+            minutes,
+          ).padStart(2, "0");
+          document.getElementById("cd-secs").textContent = String(
+            seconds,
+          ).padStart(2, "0");
+        }
+
+        updateTimer();
+        setInterval(updateTimer, 1000);
+      }
+
+      startAnniversaryCountdown();
+    </script>
+  </body>
 </html>

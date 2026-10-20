@@ -1,33 +1,184 @@
-@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
 :root {
-  --primary-bg-color: #131112;
-  --title-font: "", sans-serif;
-  --title-text-color: #fbf1c7;
-  --text-color: #d9d9d9;
-}
-
-@font-face {
-  font-family: "";
-  src: url("") format("truetype");
-  font-weight: bold;
-  font-style: normal;
+  --sports-font: 'Teko', 'Dela Gothic One', sans-serif;
+  --kanji-font: 'Dela Gothic One', sans-serif;
 }
 
 body {
-  background-color: var(--primary-bg-color);
+  background-color: #0d0f12;
+  color: #e5e7eb;
+  overflow-x: hidden;
 }
 
-#bannerRow {
+.sports-font {
+  font-family: var(--sports-font);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.kanji-font {
+  font-family: var(--kanji-font);
+}
+
+.hero-parallax {
+  position: relative;
+  height: 55vh;
+  min-height: 380px;
+  background-image: url('assets/images/bg.jpg');
+  background-attachment: fixed; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(13, 15, 18, 0.45) 0%, rgba(13, 15, 18, 0.92) 90%);
+}
+
+
+.hero-logo {
+  max-width: 40vw;
+  max-height: 40vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.8));
+  transition: transform 0.3s ease;
+}
+
+.hero-logo:hover {
+  transform: scale(1.03);
+}
+
+/* collages */
+.collage-container {
+  display: flex;
+  width: 100%;
+  max-width: 760px; 
+  height: 520px;
+  gap: 8px;
+  padding: 8px;
+  background-color: #161a20;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.panel {
+  flex: 1; 
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #0b0c0e;
+  transition: flex 0.55s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.4s ease;
+}
+
+
+.collage-container:not(.has-active) .panel:hover {
+  flex: 1.4;
+}
+
+.panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top; 
+  display: block;
+}
+
+.panel.active {
+  flex: 100 0 100%;
+  cursor: default;
+}
+
+.collage-container.has-active .panel:not(.active) {
+  flex: 0 0 0;
+  opacity: 0;
+  pointer-events: none;
   margin: 0;
   padding: 0;
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("assets/images/bg.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  /* min-height: 100vh;
-  min-height: 100dvh; */
+}
+
+.panel-details {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55%;
+  height: 100%;
+  padding: 35px 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: linear-gradient(
+    to right,
+    rgba(13, 15, 18, 0) 0%,
+    rgba(13, 15, 18, 0.85) 10%,
+    rgba(13, 15, 18, 0.98) 100%
+  );
+  opacity: 0;
+  transform: translateX(30px);
+  pointer-events: none;
+  transition: opacity 0.35s ease 0.2s, transform 0.35s ease 0.2s;
+}
+
+.panel.active .panel-details {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+.collage-container.has-active {
+  gap: 0;
+}
+
+.close-btn {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.close-btn:hover {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+.team-section:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.site-footer {
+  background-color: #080a0c;
+  color: #9ca3af;
+}
+
+.site-footer strong {
+  color: #e5e7eb;
+}
+
+.extra-small {
+  font-size: 0.75rem;
+}
+
+.countdown-box {
+  max-width: 380px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+#anniversary-countdown span {
+  font-family: var(--sports-font);
+  line-height: 1;
 }
