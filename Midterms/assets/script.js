@@ -68,12 +68,10 @@ const getBdayPhotos = async () => {
   var month = date.split("-")[1];
   var day = date.split("-")[2];
   const currentYear = new Date().getFullYear();
-//   elParentResult.innerHTML = `
-//   <div class="h1">Results</div>
-//   <div class="spinner-border" role="status">
-//     <span class="visually-hidden">Loading...</span>
-//   </div>
-//   <div class=row>`;
+  elParentResult.innerHTML = `
+  <div class="h1">Results</div>
+  
+  <div class=row>`;
 
   for (let yr = currentYear; yr >= 2012; yr--) {
     const dateString = `${yr}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
