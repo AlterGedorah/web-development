@@ -1,3 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --title-font: 'Space Grotesk', sans-serif;
+    --text-font: 'Space Mono';
+    --text-color: whitesmoke;
+}
+
 body {
     margin: 0px;
+
+}
+
+a {
+    color: var(--text-color);
+    font-family: var(--title-font);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.17);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.21);
+}
+
+.hero-parallax {
+    position: relative;
+    height: 55vh;
+    min-height: 380px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/bg.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero-card {
+    background: rgba(255, 255, 255, 0.17);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.21);
+}
+
+#hero-heading {
+    font-size: 64px;
+    font-family: var(--title-font);
+    color: var(--text-color);
+}
+
+#hero-text {
+    font-family: var(--title-font);
+    color: var(--text-color);
+}
+
+#enter-text {
+    font-family: var(--title-font);
+    color: var(--text-color);
 }

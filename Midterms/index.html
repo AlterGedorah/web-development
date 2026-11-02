@@ -12,20 +12,51 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="assets/style.css" />
   </head>
 
   <body>
-    <header></header>
-    <main>
-      <div
-        class="container-fluid vh-100 d-flex justify-content-center align-content-center flex-column"
-      >
-        <div class="h1 text-center">Mars Lente is on the way!</div>
-        <div class="d-flex justify-content-center">
-          <img src="assets/images/giphy.gif" alt="" />
+    <header>
+      <nav class="navbar container-fluid">
+        <div class="px-3 d-flex flex-row align-items-center">
+          <a class="p-2" href="#">Home</a>
+          <a class="p-2" href="#">Search</a>
+        </div>
+      </nav>
+    </header>
+    <section class="hero-parallax">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <div class="h4" id="hero-heading">Mars Lente</div>
+            <p id="hero-text">
+              Want to know what the rovers saw in Mars during your most recent
+              Birthday?
+            </p>
+          </div>
+          <div class="col-6">
+            <div class="card h-100 px-4 d-flex justify-content-center" id="hero-card">
+              <div class="h4" id="enter-text">Enter Your Birthday Here</div>
+              <form class="row">
+                  <div class="col-10">
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="bDayDate"
+                  />
+                </div>
+                <div class="col-2 p-0">
+                  <button type="submit" class="btn btn-primary mb-3">
+                    Search
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
-    </main>
+    </section>
+    <main></main>
     <footer></footer>
 
     <script
@@ -33,5 +64,6 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script src="assets/script.js"></script>
   </body>
 </html>
