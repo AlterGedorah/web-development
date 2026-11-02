@@ -3,16 +3,18 @@
 :root {
     --title-font: 'Space Grotesk', sans-serif;
     --text-font: 'Space Mono';
-    --text-color: whitesmoke;
+    --text-color-white: whitesmoke;
+    --text-color-black: #000000;
 }
 
 body {
     margin: 0px;
+    margin-bottom: 1rem;
 
 }
 
 a {
-    color: var(--text-color);
+    color: var(--text-color-white);
     font-family: var(--title-font);
     font-weight: bold;
     text-decoration: none;
@@ -62,15 +64,41 @@ header {
 #hero-heading {
     font-size: 64px;
     font-family: var(--title-font);
-    color: var(--text-color);
+    color: var(--text-color-white);
 }
 
 #hero-text {
     font-family: var(--title-font);
-    color: var(--text-color);
+    color: var(--text-color-white);
 }
 
 #enter-text {
     font-family: var(--title-font);
-    color: var(--text-color);
+    color: var(--text-color-white);
+}
+h1 {
+    font-family: var(--title-font);
+}
+.rover-text {
+    font-size: 32px;
+    font-weight: lighter;
+    font-family: var(--title-font);
+    color: var(--text-color-black);
+}
+
+.earth-date,.sol {
+    font-size: 16px;
+    font-family: var(--title-font);
+    color: var(--text-color-black);
+}
+
+.square-card {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.square-card .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

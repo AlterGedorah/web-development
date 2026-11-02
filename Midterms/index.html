@@ -35,15 +35,14 @@
             </p>
           </div>
           <div class="col-6">
-            <div class="card h-100 px-4 d-flex justify-content-center" id="hero-card">
+            <div
+              class="card h-100 px-4 d-flex justify-content-center"
+              id="hero-card"
+            >
               <div class="h4" id="enter-text">Enter Your Birthday Here</div>
               <form class="row">
-                  <div class="col-10">
-                  <input
-                    type="date"
-                    class="form-control"
-                    id="bDayDate"
-                  />
+                <div class="col-10">
+                  <input type="date" class="form-control" id="bDayDate" />
                 </div>
                 <div class="col-2 p-0">
                   <button type="submit" class="btn btn-primary mb-3">
@@ -56,7 +55,16 @@
         </div>
       </div>
     </section>
-    <main></main>
+    <div class="container pt-3 px-0 mb-1">
+      <div class="h1">Latest Photo</div>
+      <div class="row" id="parentLatest">
+        <div class="h3 my-3" id="name">
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </div>
+    </div>
     <footer></footer>
 
     <script
