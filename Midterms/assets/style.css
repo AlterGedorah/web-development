@@ -102,3 +102,9 @@ h1 {
     height: 100%;
     object-fit: cover;
 }
+
+#result-text {
+    color: var(--text-color-white);
+    font-family: var(--title-font);
+    font-size: 32px;
+}
