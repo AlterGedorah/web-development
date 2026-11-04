@@ -19,7 +19,7 @@ const getBdayPhotos = async () => {
     );
     const roverPhotos = await response.json();
 
-    elParentResult.innerHTML += `<div class="h1 pt-3">`+ yr +`</div>`;
+    elParentResult.innerHTML += `<div class="h1 pt-3">`+ yr +`-`+ month +`-`+ day +`</div>`;
     for (let i = 0; i < roverPhotos.photos.length; i++) {
       const photos = roverPhotos.photos[i];
       elParentResult.innerHTML +=
