@@ -9,7 +9,8 @@ const getBdayPhotos = async () => {
   const day = fullDate.split("-")[2];
   const currentYear = new Date().getFullYear();
 
-  elParentResult.innerHTML = `<div class="h1">Results for `+ fullDate +`</div>`;
+  elParentResult.innerHTML =
+    `<div class="h1">Results for ` + fullDate + `</div>`;
 
   for (let yr = currentYear; yr >= 2021; yr--) {
     const dateString = `${yr}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
@@ -19,15 +20,19 @@ const getBdayPhotos = async () => {
     );
     const roverPhotos = await response.json();
 
-    elParentResult.innerHTML += `<div class="h1 pt-3">`+ yr +`-`+ month +`-`+ day +`</div>`;
+    elParentResult.innerHTML +=
+      `<div class="h1 pt-3">` + yr + `-` + month + `-` + day + `</div>`;
     for (let i = 0; i < roverPhotos.photos.length; i++) {
       const photos = roverPhotos.photos[i];
+
       elParentResult.innerHTML +=
         `
             <div class="col-3 pt-4">
             <a
-              href="` +
-        photos.img_src +
+              href="view.html?id=` +
+        photos.id +
+        `&date=` +
+        photos.earth_date +
         `"
               target="_blank"
               rel="noopener noreferrer"
