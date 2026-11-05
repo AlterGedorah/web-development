@@ -46,7 +46,7 @@ const renderSection = (rover) => {
     for (let j = 0; j < paginatedPhotos.length; j++) {
       roverHTML +=
         '<div class="col-3 pt-4">' +
-        '<a href="view.html?id='+ paginatedPhotos[j].id +'" target="_blank" rel="noopener noreferrer>' +
+        '<a href="view.html?id='+ paginatedPhotos[j].id +'" target="_blank" rel="noopener noreferrer">' +
         '<div class="card square-card">' +
         '<img src="' +
         paginatedPhotos[j].img_src +
